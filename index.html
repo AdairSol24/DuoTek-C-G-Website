@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DuoTek C&G — Mantenimiento e Instalación Industrial / Industrial Maintenance & Installation</title>
   <meta name="description" content="DuoTek C&G - Mantenimiento, instalación y calibración de maquinaria hidráulica y de alimentos. / Maintenance, installation and calibration services." />
-
   <style>
     :root{
       --accent:#7b0323; /* wine red */
@@ -30,6 +29,7 @@
     .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
     .service{padding:14px;border-radius:8px;border:1px solid #eedede;background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(250,250,250,0.8))}
     .cta{display:inline-block;padding:10px 14px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none}
+    section[id]{scroll-margin-top:80px;}
     footer{padding:30px 0;color:var(--muted)}
     .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
     label{display:block;font-size:13px;margin-bottom:6px}
@@ -91,7 +91,6 @@
           </div>
         </div>
       </div>
-
       <div class="hero-right">
         <div class="card">
           <h3 data-en>Contact</h3>
@@ -103,6 +102,62 @@
         </div>
       </div>
     </section>
+
+    <!-- Services Section -->
+    <section id="services" style="margin-top:48px">
+      <div class="card">
+        <h2 data-en>Our Services</h2>
+        <h2 data-es style="display:none">Nuestros Servicios</h2>
+        <ul>
+          <li data-en>Hydraulic Systems: Repairs, preventive maintenance, troubleshooting</li>
+          <li data-es style="display:none">Sistemas Hidráulicos: Reparaciones, mantenimiento preventivo, diagnóstico</li>
+          <li data-en>Food Machinery: Cleaning, calibration, safety compliance</li>
+          <li data-es style="display:none">Maquinaria Alimentaria: Limpieza, calibración, seguridad</li>
+          <li data-en>Calibration: Documented, standards-traceable</li>
+          <li data-es style="display:none">Calibración: Documentadas, trazables a estándares</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="margin-top:48px">
+      <div class="card">
+        <h2 data-en>About Us</h2>
+        <h2 data-es style="display:none">Nosotros</h2>
+        <p data-en>DuoTek C&G was founded in Puebla to provide certified industrial maintenance, installation, and calibration services for hydraulic and food machinery. Our bilingual team is committed to quality, safety, and customer satisfaction.</p>
+        <p data-es style="display:none">DuoTek C&G fue fundada en Puebla para ofrecer servicios certificados de mantenimiento, instalación y calibración para maquinaria hidráulica y alimentaria. Nuestro equipo bilingüe está comprometido con la calidad, la seguridad y la satisfacción del cliente.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="margin-top:48px">
+      <div class="card">
+        <h2 data-en>Contact Us</h2>
+        <h2 data-es style="display:none">Contáctanos</h2>
+        <form>
+          <div class="grid">
+            <div>
+              <label for="name" data-en>Name</label>
+              <label for="name" data-es style="display:none">Nombre</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+              <label for="email" data-en>Email</label>
+              <label for="email" data-es style="display:none">Correo</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+          <label for="message" data-en>Message</label>
+          <label for="message" data-es style="display:none">Mensaje</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit" data-en>Send</button>
+          <button type="submit" data-es style="display:none">Enviar</button>
+        </form>
+        <div style="margin-top:12px">
+          <a href="https://wa.me/521234567890" target="_blank" style="background:#25D366;color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;display:inline-block">WhatsApp</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -111,6 +166,35 @@
         <div style="color:var(--muted)">© DuoTek C&amp;G — Puebla. All rights reserved.</div>
         <div style="color:var(--muted)">Built with care • Bilingual (EN/ES)</div>
       </div>
+    </div>
+  </footer>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btnEn = document.getElementById('btn-en');
+    const btnEs = document.getElementById('btn-es');
+    const enElements = document.querySelectorAll('[data-en]');
+    const esElements = document.querySelectorAll('[data-es]');
+
+    function showEnglish() {
+      enElements.forEach(el => el.style.display = '');
+      esElements.forEach(el => el.style.display = 'none');
+      btnEn.setAttribute('aria-pressed', 'true');
+      btnEs.setAttribute('aria-pressed', 'false');
+    }
+
+    function showSpanish() {
+      enElements.forEach(el => el.style.display = 'none');
+      esElements.forEach(el => el.style.display = '');
+      btnEn.setAttribute('aria-pressed', 'false');
+      btnEs.setAttribute('aria-pressed', 'true');
+    }
+
+    btnEn.addEventListener('click', showEnglish);
+    btnEs.addEventListener('click', showSpanish);
+  });
+  </script>
+</body>
+</html>
     </div>
   </footer>
 </body>
