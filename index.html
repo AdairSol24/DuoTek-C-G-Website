@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DuoTek C&G — Mantenimiento e Instalación Industrial / Industrial Maintenance & Installation</title>
+  <meta name="description" content="DuoTek C&G - Mantenimiento, instalación y calibración de maquinaria hidráulica y de alimentos. / Maintenance, installation and calibration services." />
+
+  <style>
+    :root{
+      --accent:#7b0323; /* wine red */
+      --muted:#6b7280;
+      --bg:#f8f5f5;
+      --card:#ffffff;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0b1220;line-height:1.5}
+    header{background:linear-gradient(90deg,var(--accent),#520017);color:#fff;padding:28px 20px}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-weight:700;font-size:20px}
+    .langs button{background:transparent;border:1px solid rgba(255,255,255,0.2);color:#fff;padding:6px 10px;border-radius:6px;margin-left:6px;cursor:pointer}
+    .hero{display:flex;flex-wrap:wrap;gap:20px;align-items:center;padding:36px 0}
+    .hero-left{flex:1 1 380px}
+    .hero-right{flex:0 1 360px}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(10,20,30,0.06)}
+    h1{margin:0 0 10px;font-size:28px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+    .service{padding:14px;border-radius:8px;border:1px solid #eedede;background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(250,250,250,0.8))}
+    .cta{display:inline-block;padding:10px 14px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none}
+    footer{padding:30px 0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    label{display:block;font-size:13px;margin-bottom:6px}
+    input,textarea{width:100%;padding:10px;border:1px solid #e6e9ee;border-radius:8px}
+    button[type=submit]{margin-top:8px;padding:10px 14px;border-radius:8px;border:none;background:var(--accent);color:#fff;cursor:pointer}
+    nav a{color:rgba(255,255,255,0.9);text-decoration:none;margin-left:12px}
+    @media(max-width:720px){.hero{flex-direction:column}.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">DuoTek C&amp;G — Mantenimiento e Instalación Industrial</div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <nav>
+          <a href="#services">Services / Servicios</a>
+          <a href="#about">About / Nosotros</a>
+          <a href="#contact">Contact / Contacto</a>
+        </nav>
+        <div class="langs">
+          <button id="btn-en" aria-pressed="true">EN</button>
+          <button id="btn-es" aria-pressed="false">ES</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <div class="card">
+          <h1 data-en>Maintenance, installation and calibration for hydraulic & food machinery</h1>
+          <h1 data-es style="display:none">Mantenimiento, instalación y calibración de maquinaria hidráulica y alimentaria</h1>
+          <p class="lead" data-en>We provide certified technicians, quick response, and documented calibration for industrial systems.</p>
+          <p class="lead" data-es style="display:none">Ofrecemos técnicos certificados, respuesta rápida y calibración documentada para sistemas industriales.</p>
+          <div class="services">
+            <div class="service">
+              <strong data-en>Hydraulic Systems</strong>
+              <strong data-es style="display:none">Sistemas Hidráulicos</strong>
+              <p data-en>Repairs, preventive maintenance, and troubleshooting.</p>
+              <p data-es style="display:none">Reparaciones, mantenimiento preventivo y diagnóstico.</p>
+            </div>
+            <div class="service">
+              <strong data-en>Food Machinery</strong>
+              <strong data-es style="display:none">Maquinaria Alimentaria</strong>
+              <p data-en>Cleaning, calibration, and safety compliance assistance.</p>
+              <p data-es style="display:none">Limpieza, calibración y apoyo en cumplimiento de seguridad.</p>
+            </div>
+            <div class="service">
+              <strong data-en>Calibration</strong>
+              <strong data-es style="display:none">Calibración</strong>
+              <p data-en>Documented calibrations traceable to standards.</p>
+              <p data-es style="display:none">Calibraciones documentadas trazables a estándares.</p>
+            </div>
+          </div>
+          <div style="margin-top:14px">
+            <a class="cta" href="#contact" data-en>Request a quote</a>
+            <a class="cta" href="#contact" data-es style="display:none">Solicitar cotización</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="card">
+          <h3 data-en>Contact</h3>
+          <h3 data-es style="display:none">Contacto</h3>
+          <p data-en style="margin:0 0 8px">Phone: <a href="tel:+521234567890">+52 1 234 567 890</a></p>
+          <p data-es style="display:none;margin:0 0 8px">Teléfono: <a href="tel:+521234567890">+52 1 234 567 890</a></p>
+          <p style="margin:0 0 8px">Email: <a href="mailto:info@duotekcg.mx">info@duotekcg.mx</a></p>
+          <p style="margin:0 12px 0;font-size:13px;color:var(--muted)">WhatsApp button included in contact form below.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div style="color:var(--muted)">© DuoTek C&amp;G — Puebla. All rights reserved.</div>
+        <div style="color:var(--muted)">Built with care • Bilingual (EN/ES)</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
